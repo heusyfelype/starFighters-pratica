@@ -1,6 +1,6 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
+import {NextFunction, Request, Response } from "express";
 
-export async function handleError(error: ErrorRequestHandler, req: Request, res: Response, next: NextFunction) {
+export async function handleError(error: Error, req: Request, res: Response, next: NextFunction) {
     console.log(error)
 
     // if(error.type === "axios"){

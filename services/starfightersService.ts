@@ -98,8 +98,18 @@ async function getInfosFromAPI(firstUser: string, secondUser: string) {
 }
 
 
+
+
+async function getRanking() {
+    const ranking = await starFightersRepository.selectAllRanking();
+
+    return ranking;
+}
+
+
 const starfightersService = {
-    getInfosFromAPI
+    getInfosFromAPI,
+    getRanking
 }
 
 export default starfightersService
